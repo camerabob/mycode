@@ -6,7 +6,7 @@ ipchk = input('Apply an IP address: ') # this line now prompts the user for inpu
 if ipchk == '192.168.70.1': # if a match on '192.168.70.1'
    # indented under if
    print('Looks like the IP address of the Gateway was set: ' + ipchk + ' This is not recommended.')
-elif re.match("^(\d{1,3}\.){3}\d{1,3}", ipchk): # if any IP looking data is provided, this will test true
+elif re.match("^(\d{1,3}\.){3}\d{1,3}$", ipchk): # if any IP looking data is provided, this will test true
    octets = []
    octets.extend(ipchk.split('.'))
    if int(octets[0]) >= 1 and int(octets[0]) <= 255 and \
